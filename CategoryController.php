@@ -48,23 +48,23 @@ class CategoryController extends Controller
 
         return back()->with('message', 'Employee Added Successfully');
 
-        // Employee::insert([
-        //     'user_id' => Auth::user()->id,
-        //     'employee_name' => $request->employee_name,
-        //     'email' => $request->email
-        // ]);
+        Employee::insert([
+            'user_id' => Auth::user()->id,
+            'employee_name' => $request->employee_name,
+            'email' => $request->email
+        ]);
 
-        // $employee = new Employee();
-        // $employee->user_id = Auth::user()->id;
-        // $employee->employee_name = $request->employee_name;
-        // $employee->email = $request->email;
-        // $employee->Save();
+        $employee = new Employee();
+        $employee->user_id = Auth::user()->id;
+        $employee->employee_name = $request->employee_name;
+        $employee->email = $request->email;
+        $employee->Save();
 
-        // return redirect()->back()->with('message', 'Employee created successfully');
-        // return back()->with('success','User added successfully');
+        return redirect()->back()->with('message', 'Employee created successfully');
+        return back()->with('success','User added successfully');
 
-        // Display a success toast with no title
-        // flash()->success('Operation completed successfully.');
+        Display a success toast with no title
+        flash()->success('Operation completed successfully.');
     
     }
 
