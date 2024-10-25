@@ -41,7 +41,7 @@ class SingleController extends Controller
 
         //Table is saved after data insert and send response
         $emp->save();   //when all data insert completely, table will save
-        echo "Data Successfully Inserted";   //send response to Ajax in blade file
+        echo "record Successfully Inserted";   //send response to Ajax in blade file
     }
 
     function editdata(Request $req)
